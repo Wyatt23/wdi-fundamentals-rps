@@ -20,6 +20,18 @@ function randomPlay() {
 ////////////////////////////////////////////////
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
+
+/* I was trying to use something like this but it wasn't doing the trick. 
+I'm still learning. I did find another way to get the basic job done, however...
+
+function getPlayerMove() {
+    var move = getInput();
+    if (move === null){
+        return move;
+    }else {
+        return getInput();
+    }
+} */
 var getPlayerMove = prompt("Please choose either 'rock', 'paper, or scissors");
 var getComputerMove = Math.random();
     if (getComputerMove <.33) {
@@ -76,9 +88,20 @@ function getWinner(move1, move2){
     console.log ("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
+    if (playerWins>=5 || computerWins >=5){
+       
+    }
+    /* to be continued. The function thing is beyond me at present, even with google and slack :(
+    )
     
-    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
+    // This function should continue to play Rock Paper Scissors until either the
+  // player or the computer has won five times.
+  // After each 'round', display some text in the console indicating who played
+  // what, who won, and what the current scoreboard looks like.
+  // For example,
+  //  console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+  //  console.log('The score is currently ' + playerWins + ' to ' + computerWins + '\n');
+  /* YOUR CODE HERE */
     return [playerWins, computerWins];
 }
 
