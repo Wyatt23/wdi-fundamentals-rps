@@ -20,21 +20,21 @@ function randomPlay() {
 ////////////////////////////////////////////////
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
-
 var getPlayerMove = prompt("Please choose either 'rock', 'paper, or scissors");
 var getComputerMove = Math.random();
-    if (getComputerMove <.34) {
-        getComputerMove = "Rock"; 
+    if (getComputerMove <.33) {
+        getComputerMove = "rock"; 
     }
-    else if(getComputerMove <= 0.67){
-        getComputerMove = "Paper";
+    else if(getComputerMove <= 0.66){
+        getComputerMove = "paper";
     }
     else {
-        getComputerMove="Scissors";
+        getComputerMove="scissors";
     }
 
-console.log ("Computer Said: " + getComputerMove);
+
 console.log ("Player said: " + getPlayerMove);
+console.log ("Computer Said: " + getComputerMove);
 
 var move1 = getPlayerMove; 
 var move2 = getComputerMove;
@@ -47,7 +47,7 @@ function getWinner(move1, move2){
          if (move2=== "scissors"){
             return "Player wins!";
         }
-        else{
+        else if (move2 === "paper"){
             return "Computer wins!";
         }
     }
@@ -70,6 +70,8 @@ function getWinner(move1, move2){
 }
     console.log(getWinner(move1,move2));
     
+    //I know this isn't how you wanted it but it was all I could do to make it work//
+    
     function playToFive() {
     console.log ("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
@@ -78,4 +80,5 @@ function getWinner(move1, move2){
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
+}
 
